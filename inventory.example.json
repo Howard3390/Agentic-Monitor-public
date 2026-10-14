@@ -1,0 +1,27 @@
+{
+  "assets": {
+    "example-linux": {
+      "kind": "snmp_v2c",
+      "profile": "linux_host",
+      "display_name": "Linux 主机（示例）",
+      "description": "示例资产；使用前改成自己有权监控的地址",
+      "host": "192.0.2.20",
+      "port": 161,
+      "community_env": "LINUX_SNMP_COMMUNITY",
+      "services": {
+        "docker": {
+          "host_env": "MONITOR_SSH_HOST",
+          "port_env": "MONITOR_SSH_PORT",
+          "user_env": "MONITOR_SSH_USER",
+          "password_env": "MONITOR_SSH_PASSWORD"
+        },
+        "mysql": {
+          "host_env": "MONITOR_MYSQL_HOST",
+          "port_env": "MONITOR_MYSQL_PORT",
+          "user_env": "MONITOR_MYSQL_USER",
+          "password_env": "MONITOR_MYSQL_PASSWORD"
+        }
+      }
+    }
+  }
+}
