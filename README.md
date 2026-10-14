@@ -2,6 +2,15 @@
 
 对话式按需监控项目。用户在终端或 Streamlit 页面提问，模型根据问题选择只读工具，Python 执行 SNMP、Docker 或 MySQL 查询，再把实测结果交给模型组织中文回答。项目不运行 Zabbix 服务，也不做后台定时采集。
 
+## 项目截图
+
+### 效果展示1
+![效果展示1](docs/images/1.png)
+
+### 效果展示2
+![效果展示2](docs/images/2.png)
+
+
 ## 主要能力
 
 - **受控工具调用**：`list_assets`、`check_snmp`、`check_docker`、`check_mysql` 和 `observation_history` 均在 `app.py` 明确注册。查询目标只能来自资产清单，模型不能指定任意地址、OID 或系统命令。
